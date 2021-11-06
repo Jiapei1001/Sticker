@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.119921875" />
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout-w936dp/activity_login.xml" value="0.190234375" />
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/msg_card.xml" value="0.176" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>
