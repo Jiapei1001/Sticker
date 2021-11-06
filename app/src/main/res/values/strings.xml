@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">sticker</string>
+    <string name="msg_card_sender_name">name</string>
+    <string name="msg_card_sender_time">time</string>
+    <string name="msg_card_receiver_name">name</string>
+    <string name="msg_card_receiver_time">time</string>
+    <string name="sender_image">sender_image</string>
+    <string name="receiver_image">receiver_image</string>
 </resources>
