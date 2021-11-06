@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "704894221580",
+    "firebase_url": "https://sticker-fall2021-default-rtdb.firebaseio.com",
+    "project_id": "sticker-fall2021",
+    "storage_bucket": "sticker-fall2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704894221580:android:a0790420a2245e75749d29",
+        "android_client_info": {
+          "package_name": "edu.neu.firebase.sticker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704894221580-572vh1civav9mgjbl3q3tnm1e7bjq54d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvlVYgCHtYMcSlO3DNf6fiex61ygMs_ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704894221580-572vh1civav9mgjbl3q3tnm1e7bjq54d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
