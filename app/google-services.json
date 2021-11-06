@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "704894221580",
-    "firebase_url": "https://sticker-fall2021-default-rtdb.firebaseio.com",
-    "project_id": "sticker-fall2021",
-    "storage_bucket": "sticker-fall2021.appspot.com"
+    "project_number": "125289041710",
+    "project_id": "sticker-515a1",
+    "storage_bucket": "sticker-515a1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:704894221580:android:a0790420a2245e75749d29",
+        "mobilesdk_app_id": "1:125289041710:android:d0a6fc7457deea8c68f4bf",
         "android_client_info": {
           "package_name": "edu.neu.firebase.sticker"
         }
       },
       "oauth_client": [
         {
-          "client_id": "704894221580-572vh1civav9mgjbl3q3tnm1e7bjq54d.apps.googleusercontent.com",
+          "client_id": "125289041710-4s9j9i5kipm8lfovd9nc2i8jod39g70n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAvlVYgCHtYMcSlO3DNf6fiex61ygMs_ck"
+          "current_key": "AIzaSyC7y7geglG9SoVliPdezKy8uPTuSp-O9fI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "704894221580-572vh1civav9mgjbl3q3tnm1e7bjq54d.apps.googleusercontent.com",
+              "client_id": "125289041710-4s9j9i5kipm8lfovd9nc2i8jod39g70n.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
