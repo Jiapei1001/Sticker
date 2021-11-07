@@ -11,16 +11,16 @@ import edu.neu.firebase.sticker.R;
 
 public class MsgHolder extends RecyclerView.ViewHolder {
 
-    private ImageView senderSticker;
-    private ImageView receiverSticker;
-    private TextView senderStickerTime;
-    private TextView receiverStickerTime;
+    public ImageView senderSticker;
+    public ImageView receiverSticker;
+    public TextView senderStickerTime;
+    public TextView receiverStickerTime;
 
     public MsgHolder(@NonNull View itemView) {
         super(itemView);
-        senderSticker = itemView.findViewById(R.id.imageViewSender);
-        receiverSticker = itemView.findViewById(R.id.imageViewReceiver);
-        senderStickerTime = itemView.findViewById(R.id.textViewSenderTime);
-        receiverStickerTime = itemView.findViewById(R.id.textViewReceiverTime);
+        senderSticker = itemView.findViewById(R.id.msgImageViewSender);
+        receiverSticker = itemView.findViewById(R.id.msgImageViewReceiver);
+        senderStickerTime = itemView.findViewById(R.id.msgSendTime);
+        receiverStickerTime = itemView.findViewById(R.id.msgReceivTime);
     }
 }
