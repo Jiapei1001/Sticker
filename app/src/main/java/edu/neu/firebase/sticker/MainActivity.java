@@ -8,13 +8,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
-
-
+    private DatabaseReference mDatabase; //for insert database object value
+    private DatabaseReference mUsers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        //get user reference
+        mUsers = mDatabase.child("users");
 
         Button button1 = (Button) findViewById(R.id.button_login);
         button1.setOnClickListener(v -> {
