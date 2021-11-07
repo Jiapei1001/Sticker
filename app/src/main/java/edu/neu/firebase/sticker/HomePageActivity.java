@@ -1,12 +1,17 @@
 package edu.neu.firebase.sticker;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class HomePageActivity extends AppCompatActivity {
+
     private String username;
     private DatabaseReference mDatabase;
     private DatabaseReference mUsers;
