@@ -140,7 +140,7 @@
                 android:src="@drawable/sticker15"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
