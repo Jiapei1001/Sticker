@@ -9,6 +9,4 @@ public class User {
         this.userid = userid;
     }
 
-
-
 }
