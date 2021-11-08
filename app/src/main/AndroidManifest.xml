@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sticker">
         <activity
+            android:name=".stickerHistory.ReceivedStickersActivity"
+            android:exported="true" />
+        <activity
             android:name=".msghistory.MsgHistoryActivity"
             android:exported="true" />
         <activity
