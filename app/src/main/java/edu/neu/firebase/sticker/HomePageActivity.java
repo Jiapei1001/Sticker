@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import edu.neu.firebase.sticker.R;
+
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -22,9 +26,6 @@ public class HomePageActivity extends AppCompatActivity {
     private String username;
     private DatabaseReference mDatabase;
     private DatabaseReference mUsers;
-    private static final String channel_id = "CHANNEL_ID";
-    private static final String channel_name = "CHANNEL_NAME";
-    private static final String channel_description = "CHANNEL_DESCRIPTION";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,49 +46,45 @@ public class HomePageActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendNotification(view);
+                String channelId = "100";
+                NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                Notification.Builder builder = new Notification.Builder(HomePageActivity.this, channelId);
+
+                builder.setSmallIcon ( R.drawable.logo );
+                builder.setLargeIcon ( BitmapFactory.decodeResource( getResources (),R.drawable.logo ) );
+                builder.setContentTitle("Title");                    //set title
+                builder.setContentText("Click to jump");                 //message content
+                builder.setWhen(System.currentTimeMillis());
+                builder.setAutoCancel(true);
+
+
+                //jump to activity
+                Intent intent =new Intent (HomePageActivity.this,NotificationIntent.class);
+                PendingIntent pi = PendingIntent.getActivities(HomePageActivity.this, 0, new Intent[]{intent}, PendingIntent.FLAG_CANCEL_CURRENT);
+                builder.setContentIntent(pi);
+                //show content
+                Notification notification = builder.build();
+                manager.notify(1, notification);
             }
         });
     }
 
     public void createNotificationChannel() {
+        // This must be called early because it must be called before a notification is sent.
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = channel_name;
-            String description = channel_description;
+            CharSequence name = "Notification name";
+            String description = "channel_description";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(channel_id, name, importance);
+            NotificationChannel channel = new NotificationChannel("100", name, importance);
             channel.setDescription(description);
-            //Reference: https://developer.android.com/training/notify-user/build-notification?hl=zh-cn
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
     }
-    public void sendNotification(View view) {
 
-        // Prepare intent which is triggered if the
-        // notification is selected
-        Intent intent = new Intent(this, HomePageActivity.class);
-        PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
-        PendingIntent callIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(),
-                new Intent(this, HomePageActivity.class), 0);
 
-        // Build notification
-        // Need to define a channel ID after Android Oreo
-        String channelId = channel_id;
-        NotificationCompat.Builder notifyBuild = new NotificationCompat.Builder(this, channelId)
-                //"Notification icons must be entirely white."
-                .setSmallIcon(R.drawable.logo)
-                .setContentTitle("Test" + "test@test.com")
-                .setContentText("Subject")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                // hide the notification after its selected
-                .setAutoCancel(true)
-                .addAction(R.drawable.logo, "Call", callIntent)
-                .setContentIntent(pIntent);
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        // // notificationId is a unique int for each notification that you must define
-        notificationManager.notify(0, notifyBuild.build());
-
-    }
 }
