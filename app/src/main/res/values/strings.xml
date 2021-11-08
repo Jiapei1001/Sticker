@@ -11,4 +11,5 @@
     <string name="username">username</string>
     <string name="stickers_stat">Stickers Stat</string>
     <string name="chat_history">Chat History</string>
+    <string name="msg_history_friend_name">friend name</string>
 </resources>
