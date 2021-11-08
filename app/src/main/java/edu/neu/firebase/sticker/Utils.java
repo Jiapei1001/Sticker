@@ -16,7 +16,7 @@ public class Utils {
 
         return formattedDate;
     }
-
+  
     public static HashMap<String, Integer> loadStickerMap() {
         HashMap<String, Integer> stickerMap = new HashMap<String, Integer>() {{
             put("sticker1", R.drawable.sticker1);
@@ -38,4 +38,5 @@ public class Utils {
 
         return stickerMap;
     }
+
 }

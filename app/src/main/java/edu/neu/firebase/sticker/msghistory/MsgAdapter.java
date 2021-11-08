@@ -16,7 +16,9 @@ import edu.neu.firebase.sticker.Utils;
 
 public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
+
     private Map<String, Integer> stickerMap;
+
     private final ArrayList<MsgCard> msgCardList;
     private String userName;
     private String friendName;
@@ -25,8 +27,10 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
         this.msgCardList = msgCardList;
         this.userName = userName;
         this.friendName = friendName;
+
         // init sticker map
         this.stickerMap = Utils.loadStickerMap();
+
     }
 
     @NonNull

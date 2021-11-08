@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+
         <entry key="app/src/main/res/layout/activity_msg_history.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/activity_realtime_database.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/activity_received_stickers.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/chat_row.xml" value="0.28541666666666665" />
         <entry key="app/src/main/res/layout/msg_card.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_stickers.xml" value="0.20380434782608695" />
+
       </map>
     </option>
   </component>
@@ -17,5 +20,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.19443236189647672" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -1,13 +1,16 @@
 package edu.neu.firebase.sticker.msghistory;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -44,6 +47,7 @@ public class MsgHistoryActivity extends AppCompatActivity {
         msgHistoryAdapterView.setLayoutManager(layoutManager);
         msgHistoryAdapterView.setAdapter(msgHistoryAdapter);
 
+
         // connect to firebase db
         DatabaseReference fireDB = FirebaseDatabase.getInstance().getReference();
 
@@ -73,3 +77,4 @@ public class MsgHistoryActivity extends AppCompatActivity {
         );
     }
 }
+
