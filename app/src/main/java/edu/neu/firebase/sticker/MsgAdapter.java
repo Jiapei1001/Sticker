@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker;
+package edu.neu.firebase.sticker.msghistory;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,25 +11,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import edu.neu.firebase.sticker.MsgCard;
+import edu.neu.firebase.sticker.MsgHolder;
+import edu.neu.firebase.sticker.R;
+import edu.neu.firebase.sticker.Utils;
+
 public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
-    private static Map<String, Integer> stickerMap = new HashMap<String, Integer>() {{
-        put("sticker1", R.drawable.sticker1);
-        put("sticker2", R.drawable.sticker2);
-        put("sticker3", R.drawable.sticker3);
-        put("sticker4", R.drawable.sticker4);
-        put("sticker5", R.drawable.sticker5);
-        put("sticker6", R.drawable.sticker6);
-        put("sticker7", R.drawable.sticker7);
-        put("sticker8", R.drawable.sticker8);
-        put("sticker9", R.drawable.sticker9);
-        put("sticker10", R.drawable.sticker10);
-        put("sticker11", R.drawable.sticker11);
-        put("sticker12", R.drawable.sticker12);
-        put("sticker13", R.drawable.sticker13);
-        put("sticker14", R.drawable.sticker14);
-        put("sticker15", R.drawable.sticker15);
-    }};
+
+    private Map<String, Integer> stickerMap;
+
     private final ArrayList<MsgCard> msgCardList;
     private String userName;
     private String friendName;
@@ -38,6 +29,10 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
         this.msgCardList = msgCardList;
         this.userName = userName;
         this.friendName = friendName;
+
+        // init sticker map
+        this.stickerMap = Utils.loadStickerMap();
+
     }
 
     @NonNull

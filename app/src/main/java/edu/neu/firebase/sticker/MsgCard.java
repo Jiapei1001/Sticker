@@ -15,6 +15,10 @@ public class MsgCard {
         this.sticker = sticker;
     }
 
+    public MsgCard(){
+
+    }
+
     public int getSticker_key() {
         return sticker_key;
     }
