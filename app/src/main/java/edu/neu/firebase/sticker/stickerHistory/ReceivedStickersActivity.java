@@ -23,6 +23,7 @@ import java.util.Map;
 
 import edu.neu.firebase.sticker.R;
 import edu.neu.firebase.sticker.Utils;
+import edu.neu.firebase.sticker.msghistory.MsgCard;
 
 public class ReceivedStickersActivity extends AppCompatActivity {
 
@@ -47,8 +48,9 @@ public class ReceivedStickersActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Map<String, Integer> stickerCnt = new HashMap<>();
                         for (DataSnapshot kv : snapshot.getChildren()) {
-                            if (kv.child("sender").getValue(String.class).equals(currUser)) {
-                                String sticker = kv.child("sticker").getValue(String.class);
+                            MsgCard msgCard = kv.getValue(MsgCard.class);
+                            if (msgCard.getSender().equals(currUser)) {
+                                String sticker = msgCard.getSticker();
                                 stickerCnt.put(sticker, stickerCnt.getOrDefault(sticker, 1) + 1);
                             }
                         }
