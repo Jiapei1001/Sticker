@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
             Button button1 = (Button) findViewById(R.id.button_login);
             button1.setOnClickListener(v -> {
-
-
                 EditText simpleEditText = (EditText) findViewById(R.id.editUsername);
                 String username = simpleEditText.getText().toString();
                 if (username.length() == 0) {
