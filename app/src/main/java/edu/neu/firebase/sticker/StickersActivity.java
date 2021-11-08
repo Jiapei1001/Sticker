@@ -17,6 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+import edu.neu.firebase.sticker.msghistory.MsgCard;
+
 public class StickersActivity extends AppCompatActivity {
     private String sender;
     private String receiver;
@@ -33,24 +35,20 @@ public class StickersActivity extends AppCompatActivity {
     }
 
     public void onClickButtonSticker(View view) {
-        int stickerId = view.getId();
+        String stickerInfo = view.getTag().toString();
         String time = String.valueOf(System.currentTimeMillis());
-        uploadMessageInfo(sender, receiver, time, stickerId);
+        uploadMessageInfo(sender, receiver, time, stickerInfo);
     }
 
-    private void uploadMessageInfo(String sender, String receiver, String time, int stickerId) {
-        String messageRef = "user " + sender + " send sticker " + stickerId + " to " + " user " + receiver + " at " + time;
+    private void uploadMessageInfo(String sender, String receiver, String time, String stickerInfo) {
         database = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference messageInfo = database.child("massages").push();
-        String pushId = messageInfo.getKey();
-        Map messageBody = new HashMap<>();
-        messageBody.put("sticker id", stickerId);
-        messageBody.put("from", sender);
-        messageBody.put("to", receiver);
-        messageBody.put("time", time);
-
+        DatabaseReference messageInfo = database.child("massageHistory").push();
+        //String pushId = messageInfo.getKey();
+        int stickerId = getApplicationContext().getResources().getIdentifier("drawable/" + stickerInfo, null, getApplicationContext().getPackageName());
+        MsgCard msg = new MsgCard(stickerId, sender, receiver, time, stickerInfo);
+        String messageRef = "user " + sender + " send sticker " + stickerId + " to " + " user " + receiver + " at " + time;
         Map messageDatails = new HashMap<>();
-        messageDatails.put(messageRef + "/" + pushId, messageBody);
+        messageDatails.put(messageRef, msg);
         messageInfo.updateChildren(messageDatails).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
