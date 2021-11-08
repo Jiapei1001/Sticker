@@ -6,5 +6,10 @@
     <string name="msg_card_receiver_time">time</string>
     <string name="sender_image">sender_image</string>
     <string name="receiver_image">receiver_image</string>
+    <string name="hello">Hello</string>
+    <string name="send_stickers">Send Stickers</string>
+    <string name="username">username</string>
+    <string name="stickers_stat">Stickers Stat</string>
+    <string name="chat_history">Chat History</string>
     <string name="msg_history_friend_name">friend name</string>
 </resources>

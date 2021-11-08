@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sticker">
         <activity
+            android:name=".ContactCardActivity"
+            android:exported="true" />
+        <activity
             android:name=".StickersActivity"
             android:exported="true" />
         <activity
@@ -18,6 +21,8 @@
         <activity
             android:name=".HomePageActivity"
             android:exported="false" />
+            android:name=".ContactHistoryActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
