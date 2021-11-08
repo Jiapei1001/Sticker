@@ -55,7 +55,7 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         // Greeting sentence
         TextView greetingForCurrentUser = (TextView)this.findViewById(R.id.currentUserGreetingTextView);
 
-        String greeting = this.showGreetingWordsByCurrentTime();
+        String greeting = Utils.showGreetingWordsByCurrentTime();
         StringBuilder greetingInfo = new StringBuilder();
         greetingInfo.append(greeting).append(", ").append(this.username);
         greetingForCurrentUser.setText(greetingInfo);
@@ -108,11 +108,11 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
     }
 
     public void onSendStickersClick(int position) {
-//        Intent intentSendStickerClick = new Intent(this, a.class);
-//        intentSendStickerClick.putExtra("friend_username", contactList.get(position).getUsername());
-//        intentSendStickerClick.putExtra("current_user_username", username);
-//
-//        startActivity(intentSendStickerClick);
+        Intent intentSendStickerClick = new Intent(this, StickersActivity.class);
+        intentSendStickerClick.putExtra("receiver", contactList.get(position).getUsername());
+        intentSendStickerClick.putExtra("sender", username);
+
+        startActivity(intentSendStickerClick);
     }
 
     public void onChatHistoryClick(int position) {
@@ -121,17 +121,5 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
 //        intentChatHistoryClick.putExtra("current_user_username", username);
 //
 //        startActivity(intentChatHistoryClick);
-    }
-
-    private String showGreetingWordsByCurrentTime() {
-        Calendar calendar = Calendar.getInstance();
-        int timeOfDay = calendar.get(Calendar.HOUR_OF_DAY);
-        if (timeOfDay < 12) {
-            return "Good Morning";
-        } else if (timeOfDay < 17) {
-            return "Good Afternoon";
-        } else {
-            return timeOfDay < 21 ? "Good Evening" : "Good Night";
-        }
     }
 }
