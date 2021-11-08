@@ -17,9 +17,8 @@ public class MsgHistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_msg_history);
 
-        Intent intent = getIntent();
-        String currUser = intent.getStringExtra("sender");
-        String friend = intent.getStringExtra("receiver"); // friend
+        String currUser = this.getIntent().getStringExtra("sender");
+        String friend = this.getIntent().getStringExtra("receiver"); // friend
 
         TextView msgSubject = (TextView) findViewById(R.id.msg_history_subject);
         msgSubject.setText("messages from your amazing friend: " + friend);

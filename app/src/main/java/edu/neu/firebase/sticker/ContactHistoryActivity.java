@@ -18,12 +18,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
  * This is a ContactHistoryActivity to show the login user's contact.
- *
+ * <p>
  * Ref 1: Read and Write Data on Android
  * https://firebase.google.com/docs/database/android/read-and-write
  */
@@ -43,7 +44,7 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         this.username = this.getIntent().getStringExtra("USERNAME");
 
         // Sticker Statics button
-        Button btnStickersStat = (Button)this.findViewById(R.id.btnStickersStat);
+        Button btnStickersStat = (Button) this.findViewById(R.id.btnStickersStat);
         btnStickersStat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +54,7 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         });
 
         // Greeting sentence
-        TextView greetingForCurrentUser = (TextView)this.findViewById(R.id.currentUserGreetingTextView);
+        TextView greetingForCurrentUser = (TextView) this.findViewById(R.id.currentUserGreetingTextView);
 
         // Get the greeting sentence according to the current time
         String greeting = Utils.showGreetingWordsByCurrentTime();
@@ -102,13 +103,14 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
 
     private void createRecyclerView() {
         LayoutManager layoutManager = new LinearLayoutManager(this);
-        RecyclerView recyclerView = (RecyclerView)this.findViewById(R.id.contactRecyclerView);
+        RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.contactRecyclerView);
         recyclerView.setHasFixedSize(true);
         this.contactHistoryAdapter = new ContactHistoryAdapter(this.contactList, this);
         recyclerView.setAdapter(this.contactHistoryAdapter);
         recyclerView.setLayoutManager(layoutManager);
     }
 
+    @Override
     public void onSendStickersClick(int position) {
         Intent intentSendStickerClick = new Intent(this, StickersActivity.class);
         intentSendStickerClick.putExtra("receiver", contactList.get(position).getUsername());
@@ -117,6 +119,7 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         startActivity(intentSendStickerClick);
     }
 
+    @Override
     public void onChatHistoryClick(int position) {
         Intent intentChatHistoryClick = new Intent(this, MsgHistoryActivity.class);
         intentChatHistoryClick.putExtra("receiver", contactList.get(position).getUsername());
