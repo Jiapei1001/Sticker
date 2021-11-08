@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker.msghistory;
+package edu.neu.firebase.sticker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,12 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
-import edu.neu.firebase.sticker.R;
 
 public class MsgHistoryActivity extends AppCompatActivity {
 
@@ -21,8 +18,8 @@ public class MsgHistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_msg_history);
 
         Intent intent = getIntent();
-        String currUser = intent.getStringExtra("current_user_username");
-        String friend = intent.getStringExtra("friend_username");
+        String currUser = intent.getStringExtra("sender");
+        String friend = intent.getStringExtra("receiver"); // friend
 
         TextView msgSubject = (TextView) findViewById(R.id.msg_history_subject);
         msgSubject.setText("messages from your amazing friend: " + friend);

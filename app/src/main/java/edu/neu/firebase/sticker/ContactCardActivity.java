@@ -25,7 +25,7 @@ public class ContactCardActivity extends AppCompatActivity {
     }
 
     public void onChatHistoryClick(int position) {
-        //        Intent intent = new Intent(ContactCardActivity.this, MsgHistoryActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(ContactCardActivity.this, MsgHistoryActivity.class);
+        startActivity(intent);
     }
 }

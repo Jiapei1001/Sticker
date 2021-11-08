@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,8 +15,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import edu.neu.firebase.sticker.msghistory.MsgCard;
 
 public class StickersActivity extends AppCompatActivity {
     private String sender;
@@ -35,7 +32,8 @@ public class StickersActivity extends AppCompatActivity {
     }
 
     public void onClickButtonSticker(View view) {
-        String stickerInfo = view.getTag().toString();
+        String stickerInfo = (String)view.getTag();
+
         String time = String.valueOf(System.currentTimeMillis());
         uploadMessageInfo(sender, receiver, time, stickerInfo);
     }

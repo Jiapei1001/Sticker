@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker.msghistory;
+package edu.neu.firebase.sticker;
 
 public class MsgCard {
     private int sticker_key;

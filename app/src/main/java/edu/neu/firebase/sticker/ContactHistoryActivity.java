@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
- * This is a ContactHistoryActivity.
+ * This is a ContactHistoryActivity to show the login user's contact.
  *
  * Ref 1: Read and Write Data on Android
  * https://firebase.google.com/docs/database/android/read-and-write
@@ -55,9 +55,11 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         // Greeting sentence
         TextView greetingForCurrentUser = (TextView)this.findViewById(R.id.currentUserGreetingTextView);
 
+        // Get the greeting sentence according to the current time
         String greeting = Utils.showGreetingWordsByCurrentTime();
         StringBuilder greetingInfo = new StringBuilder();
         greetingInfo.append(greeting).append(", ").append(this.username);
+
         greetingForCurrentUser.setText(greetingInfo);
 
         this.createRecyclerView();
@@ -116,10 +118,10 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
     }
 
     public void onChatHistoryClick(int position) {
-//        Intent intentChatHistoryClick = new Intent(this, a.class);
-//        intentChatHistoryClick.putExtra("friend_username", contactList.get(position).getUsername());
-//        intentChatHistoryClick.putExtra("current_user_username", username);
-//
-//        startActivity(intentChatHistoryClick);
+        Intent intentChatHistoryClick = new Intent(this, MsgHistoryActivity.class);
+        intentChatHistoryClick.putExtra("receiver", contactList.get(position).getUsername());
+        intentChatHistoryClick.putExtra("sender", username);
+
+        startActivity(intentChatHistoryClick);
     }
 }

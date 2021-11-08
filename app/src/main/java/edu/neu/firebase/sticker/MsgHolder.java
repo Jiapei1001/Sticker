@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker.msghistory;
+package edu.neu.firebase.sticker;
 
 import android.view.View;
 import android.widget.ImageView;
