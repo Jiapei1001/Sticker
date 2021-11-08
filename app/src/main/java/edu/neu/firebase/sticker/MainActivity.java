@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 if (username.length() == 0) {
                     Toast.makeText(MainActivity.this, "Please enter user Name", Toast.LENGTH_SHORT).show();
                 }else {
-                    Intent intent1 = new Intent(MainActivity.this, HomePageActivity.class);
+                    Intent intent1 = new Intent(MainActivity.this, ContactHistoryActivity.class);
                     intent1.putExtra("USERNAME", username);
                     startActivity(intent1);
                 }
