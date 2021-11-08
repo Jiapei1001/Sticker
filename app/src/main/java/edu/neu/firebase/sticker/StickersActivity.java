@@ -42,7 +42,7 @@ public class StickersActivity extends AppCompatActivity {
 
     private void uploadMessageInfo(String sender, String receiver, String time, String stickerInfo) {
         database = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference messageInfo = database.child("massageHistory").push();
+        DatabaseReference messageInfo = database.child("massageHistory");
         //String pushId = messageInfo.getKey();
         int stickerId = getApplicationContext().getResources().getIdentifier("drawable/" + stickerInfo, null, getApplicationContext().getPackageName());
         MsgCard msg = new MsgCard(stickerId, sender, receiver, time, stickerInfo);
