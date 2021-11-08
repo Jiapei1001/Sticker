@@ -20,8 +20,8 @@ public class ContactCardActivity extends AppCompatActivity {
     }
 
     public void onSendStickersClick(int position) {
-//        Intent intent = new Intent(ContactCardActivity.this, ShowStickers.class);
-//        startActivity(intent);
+        Intent intent = new Intent(ContactCardActivity.this, StickersActivity.class);
+        startActivity(intent);
     }
 
     public void onChatHistoryClick(int position) {
