@@ -6,7 +6,7 @@ Yongzheng Qi, Qiangqiang Zhang, Yu Fu, Jiapei Li
 
 Northeastern University, SV and Seattle
 
-## Screenshot for Our App
+## Screenshots for Our App
 
 ### Login / Register Screens
 <div>
