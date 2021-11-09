@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +20,7 @@ import java.util.Map;
 public class StickersActivity extends AppCompatActivity {
     private String sender;
     private String receiver;
-    private EditText inputText;
+    private TextView inputText;
     private DatabaseReference database;
 
     @Override
@@ -28,7 +29,7 @@ public class StickersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stickers);
         sender = getIntent().getExtras().get("sender").toString();
         receiver = getIntent().getExtras().get("receiver").toString();
-        inputText = (EditText)findViewById(R.id.text);
+        inputText = (TextView)findViewById(R.id.text);
     }
 
     public void onClickButtonSticker(View view) {
