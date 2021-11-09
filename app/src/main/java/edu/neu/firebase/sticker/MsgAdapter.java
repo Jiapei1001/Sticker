@@ -47,7 +47,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
         if (sender.equals(userName) && receiver.equals(friendName)) {
             holder.senderSticker.setImageResource(stickerMap.get(sticker));
-            holder.senderStickerTime.setText(formattedDate);
+            holder.senderStickerTime.setText(sender + "\t\t\t\t" + formattedDate);
 
             holder.receiverSticker.setImageResource(0);
             holder.receiverStickerTime.setText("");
@@ -56,7 +56,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
             holder.senderStickerTime.setText("");
 
             holder.receiverSticker.setImageResource(stickerMap.get(sticker));
-            holder.receiverStickerTime.setText(formattedDate);
+            holder.receiverStickerTime.setText(formattedDate  + "\t\t\t\t" + receiver);
         }
     }
 
