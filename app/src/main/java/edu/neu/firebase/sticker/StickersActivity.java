@@ -57,6 +57,7 @@ public class StickersActivity extends AppCompatActivity {
         builder.setAutoCancel(true);
 
         //jump to activity
+
         Intent intent = new Intent(StickersActivity.this, JumpAvtivity.class);
         PendingIntent pi = PendingIntent.getActivities(StickersActivity.this, 0, new Intent[]{intent}, PendingIntent.FLAG_CANCEL_CURRENT);
         builder.setContentIntent(pi);
