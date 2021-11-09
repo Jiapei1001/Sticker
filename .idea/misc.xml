@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/activity_jump_avtivity.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout-land/activity_contact_history.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/layout/activity_contact_card.xml" value="0.25905797101449274" />
+        <entry key="app/src/main/res/layout/activity_contact_history.xml" value="0.25905797101449274" />
+        <entry key="app/src/main/res/layout/activity_jump_avtivity.xml" value="0.25905797101449274" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25905797101449274" />
+        <entry key="app/src/main/res/layout/activity_received_stickers.xml" value="0.25905797101449274" />
+        <entry key="app/src/main/res/layout/msg_card.xml" value="0.25905797101449274" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
