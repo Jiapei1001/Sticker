@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sticker">
         <activity
+            android:name=".JumpAvtivity"
+            android:exported="false" />
+        <activity
             android:name=".StickerStatActivity"
             android:exported="true" />
         <activity
@@ -34,4 +37,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
