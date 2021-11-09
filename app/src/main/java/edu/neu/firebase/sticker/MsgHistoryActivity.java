@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -30,7 +31,7 @@ public class MsgHistoryActivity extends AppCompatActivity {
         String friend = intent.getStringExtra("receiver"); // friend
 
         TextView msgSubject = findViewById(R.id.msg_history_subject);
-        msgSubject.setText("messages from your amazing friend: " + friend);
+        msgSubject.setText(MessageFormat.format("messages from your amazing friend: {0}", friend));
 
         // get msg contents for adapter
         ArrayList<MsgCard> msgCardList = new ArrayList<>();
@@ -55,12 +56,13 @@ public class MsgHistoryActivity extends AppCompatActivity {
                         // update
                         for (DataSnapshot ds : snapshot.getChildren()) {
                             MsgCard msgCard = ds.getValue(MsgCard.class);
+                            assert msgCard != null;
                             if ((msgCard.getSender().equals(currUser) && msgCard.getReceiver().equals(friend))
                                     || (msgCard.getSender().equals(friend) && msgCard.getReceiver().equals(currUser))) {
                                 msgCardList.add(msgCard);
                             }
                         }
-                        Collections.sort(msgCardList, (a, b) -> a.getSendTime().compareTo(b.getSendTime()));
+                        msgCardList.sort((a, b) -> a.getSendTime().compareTo(b.getSendTime()));
 
                         // update msgHistoryAdapter as msg contents have changed
                         msgHistoryAdapter.notifyDataSetChanged();
