@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_contact_card.xml" value="0.41944444444444445" />
+        <entry key="app/src/main/res/layout/activity_contact_history.xml" value="0.434375" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.31333333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
-
+        <entry key="app/src/main/res/layout/layout.xml" value="0.4557291666666667" />
         <entry key="app/src/main/res/layout/activity_msg_history.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/activity_realtime_database.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/activity_received_stickers.xml" value="0.228125" />
@@ -24,6 +31,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
+        <option name="scale" value="0.41944444444444445" />
         <option name="scale" value="0.19443236189647672" />
       </ProjectState>
     </option>
