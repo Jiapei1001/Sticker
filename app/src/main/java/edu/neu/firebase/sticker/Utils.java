@@ -12,7 +12,7 @@ public class Utils {
     public static String formatTime(String time) {
         Date date = new Date(Long.parseLong(time));
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        format.setTimeZone(TimeZone.getTimeZone("Etc/UTC"));
+        format.setTimeZone(TimeZone.getTimeZone("EST"));
         String formattedDate = format.format(date);
 
         return formattedDate;
