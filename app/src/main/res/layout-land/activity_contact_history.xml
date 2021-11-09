@@ -38,6 +38,7 @@
         android:layout_height="50dp"
         android:background="@drawable/circle"
         android:gravity="center_vertical|center_horizontal"
+        android:onClick="onStickerStatClick"
         android:text="@string/stickers_stat"
         android:textSize="11sp"
         app:backgroundTint="@null"
