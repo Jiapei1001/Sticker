@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (username.contains(".")||username.contains("//")) {
                     Toast.makeText(MainActivity.this, "Please do not enter . or //!  :)", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Intent intent1 = new Intent(MainActivity.this, HomePageActivity.class);
+                }else {
+                    Intent intent1 = new Intent(MainActivity.this, ContactHistoryActivity.class);
                     intent1.putExtra("USERNAME", username);
                     startActivity(intent1);
                 }

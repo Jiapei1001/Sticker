@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sticker">
         <activity
-            android:name=".NotificationIntent"
-            android:exported="false" />
+            android:name=".MsgHistoryActivity"
+            android:exported="true" />
         <activity
-            android:name=".HomePageActivity"
-            android:exported="false" />
+            android:name=".ContactCardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StickersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ContactHistoryActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

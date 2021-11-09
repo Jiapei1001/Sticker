@@ -3,10 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/activity_home_page.xml" value="0.2" />
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/activity_notification_intent.xml" value="0.2" />
-        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker/app/src/main/res/layout/msg_card.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker-zhangqq/app/src/main/res/layout/activity_contact_card.xml" value="0.24615384615384617" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker-zhangqq/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker-zhangqq/app/src/main/res/layout/activity_msg_history.xml" value="0.24615384615384617" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker-zhangqq/app/src/main/res/layout/activity_stickers.xml" value="0.24615384615384617" />
+        <entry key="..\:/Users/Alienware/AndroidStudioProjects/Sticker-zhangqq/app/src/main/res/layout/msg_card.xml" value="0.24615384615384617" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_contact_card.xml" value="0.41944444444444445" />
+        <entry key="app/src/main/res/layout/activity_contact_history.xml" value="0.434375" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.31333333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+        <entry key="app/src/main/res/layout/activity_stickers.xml" value="0.20380434782608695" />
+        <entry key="app/src/main/res/layout/layout.xml" value="0.4557291666666667" />
       </map>
     </option>
   </component>
@@ -15,5 +26,13 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.41944444444444445" />
+        <option name="scale" value="0.19443236189647672" />
+      </ProjectState>
+    </option>
   </component>
 </project>

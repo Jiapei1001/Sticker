@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/sticker1"
+                    android:onClick="onClickButtonSticker"
+                    android:tag="sticker1"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:tag="sticker2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker2"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:tag="sticker3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker3"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:tag="sticker4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker4"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:tag="sticker5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker5"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:tag="sticker6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker6"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:tag="sticker7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker7"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:tag="sticker8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker8"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:tag="sticker9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker9"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:tag="sticker10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker10"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:tag="sticker11"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker11"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton12"
+                    android:tag="sticker12"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker12"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/imageButton13"
+                    android:tag="sticker13"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker13"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton14"
+                    android:tag="sticker14"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickButtonSticker"
+                    android:background="@drawable/sticker14"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton15"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/sticker15"
+                    android:onClick="onClickButtonSticker"
+                    android:tag="sticker15"
+                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
