@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".stickerHistory.ReceivedStickersActivity">
+    tools:context=".StickerStatActivity">
 
     <Button
         android:id="@+id/show_received_stickers_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Show Sticker History"
+        android:text="@string/show_sticker_history"
+        android:backgroundTint="#FDA65D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

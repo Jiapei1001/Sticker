@@ -35,12 +35,12 @@ public class StickersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stickers);
         sender = getIntent().getExtras().get("sender").toString();
         receiver = getIntent().getExtras().get("receiver").toString();
-        inputText = (TextView)findViewById(R.id.text);
+        inputText = (TextView) findViewById(R.id.text);
         createNotificationChannel();
     }
 
     public void onClickButtonSticker(View view) {
-        String stickerInfo = (String)view.getTag();
+        String stickerInfo = (String) view.getTag();
 
         String time = String.valueOf(System.currentTimeMillis());
         uploadMessageInfo(sender, receiver, time, stickerInfo);
@@ -49,15 +49,15 @@ public class StickersActivity extends AppCompatActivity {
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Notification.Builder builder = new Notification.Builder(StickersActivity.this, channelId);
 
-        builder.setSmallIcon ( R.drawable.logo );
-        builder.setLargeIcon ( BitmapFactory.decodeResource( getResources (),R.drawable.logo ) );
+        builder.setSmallIcon(R.drawable.logo);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.logo));
         builder.setContentTitle("Stick Send to the User!");                    //set title
         builder.setContentText("Click to jump to choose other user");                 //message content
         builder.setWhen(System.currentTimeMillis());
         builder.setAutoCancel(true);
 
         //jump to activity
-        Intent intent =new Intent (StickersActivity.this,ContactCardActivity.class);
+        Intent intent = new Intent(StickersActivity.this, JumpAvtivity.class);
         PendingIntent pi = PendingIntent.getActivities(StickersActivity.this, 0, new Intent[]{intent}, PendingIntent.FLAG_CANCEL_CURRENT);
         builder.setContentIntent(pi);
         //show content
