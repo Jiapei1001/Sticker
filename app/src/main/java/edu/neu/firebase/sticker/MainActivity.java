@@ -3,6 +3,7 @@ package edu.neu.firebase.sticker;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,14 +24,16 @@ public class MainActivity extends AppCompatActivity {
         //get user reference
         mUsers = mDatabase.child("users");
 
-        Button button1 = findViewById(R.id.button_login);
+        Button button1 = (Button) findViewById(R.id.button_login);
         button1.setOnClickListener(v -> {
-            System.out.println("Login button clicked");
-            TextView usernameTextView = findViewById(R.id.editUsername);
-            String username = usernameTextView.getText().toString().replaceAll("\\s", "");
+            EditText simpleEditText = (EditText) findViewById(R.id.editUsername);
+            String username = simpleEditText.getText().toString();
             if (username.length() == 0) {
-                Toast.makeText(MainActivity.this, "Please enter user Name", Toast.LENGTH_SHORT).show();
-            } else {
+                Toast.makeText(MainActivity.this, "Please enter user Name!  :)", Toast.LENGTH_SHORT).show();
+            }
+            else if (username.contains(".")||username.contains("//")) {
+                Toast.makeText(MainActivity.this, "Please do not enter . or //!  :)", Toast.LENGTH_SHORT).show();
+            }else {
                 Intent intent1 = new Intent(MainActivity.this, ContactHistoryActivity.class);
                 intent1.putExtra("USERNAME", username);
                 startActivity(intent1);
