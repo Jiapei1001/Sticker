@@ -1,9 +1,8 @@
-package edu.neu.firebase.sticker.stickerHistory;
+package edu.neu.firebase.sticker;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,21 +20,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import edu.neu.firebase.sticker.R;
-import edu.neu.firebase.sticker.Utils;
-import edu.neu.firebase.sticker.msghistory.MsgCard;
 
-public class ReceivedStickersActivity extends AppCompatActivity {
+public class StickerStatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_received_stickers);
 
-        Intent intent = getIntent();
-        String currUser = intent.getStringExtra("current_user_username");
+        String currUser = getIntent().getExtras().get("current_user_username").toString();
         Button button = (Button) findViewById(R.id.show_received_stickers_btn);
         TextView textView = (TextView) findViewById(R.id.received_stickers_texts);
+        textView.setText(currUser + "'s sticker history:");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,10 +53,11 @@ public class ReceivedStickersActivity extends AppCompatActivity {
                         List<Map.Entry<String, Integer>> list = new LinkedList<>(stickerCnt.entrySet());
                         Collections.sort(list, (a, b) -> b.getValue().compareTo(a.getValue()));
 
-                        String result = "\n\n";
+                        String result = currUser + "'s sticker history:\n\n";
                         for (Map.Entry<String, Integer> e : list) {
                             result += e.getKey() + " has been sent: " + e.getValue() + " times\n\n";
                         }
+
                         textView.setText(result);
                     }
 

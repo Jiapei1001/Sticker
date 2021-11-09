@@ -42,16 +42,6 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
 
         this.username = this.getIntent().getStringExtra("USERNAME");
 
-        // Sticker Statics button
-        Button btnStickersStat = (Button) this.findViewById(R.id.btnStickersStat);
-        btnStickersStat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intentStickersStat = new Intent(this, StickerStat.class);
-//                startActivity(intentStickersStat);
-            }
-        });
-
         // Greeting sentence
         TextView greetingForCurrentUser = (TextView) this.findViewById(R.id.currentUserGreetingTextView);
 
@@ -125,5 +115,12 @@ public class ContactHistoryActivity extends AppCompatActivity implements Contact
         intentChatHistoryClick.putExtra("sender", username);
 
         startActivity(intentChatHistoryClick);
+    }
+
+    public void onStickerStatClick(View view) {
+        Intent intentSendStickerClick = new Intent(ContactHistoryActivity.this, StickerStatActivity.class);
+        intentSendStickerClick.putExtra("current_user_username", username);
+
+        startActivity(intentSendStickerClick);
     }
 }
