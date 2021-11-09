@@ -42,7 +42,7 @@ Northeastern University, SV and Seattle
 
 <div>
   <img src="https://user-images.githubusercontent.com/60984454/140998466-de215403-6c42-4fed-947b-ef8caeac859e.jpg" alt="Editor" width="300">
-  <img src="https://user-images.githubusercontent.com/60984454/140998525-37f5a756-e3f4-419d-89de-94882604c855.jpg" alt="Editor" width="300">
+  <img src="https://user-images.githubusercontent.com/60984454/140998525-37f5a756-e3f4-419d-89de-94882604c855.jpg" alt="Editor" width="500">
 </div>
 
 ### Sticker Usage Statatics Screen
