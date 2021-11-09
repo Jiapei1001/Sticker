@@ -7,8 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import edu.neu.firebase.sticker.R;
-
 public class MsgHolder extends RecyclerView.ViewHolder {
 
     public ImageView senderSticker;

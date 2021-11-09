@@ -1,8 +1,5 @@
 package edu.neu.firebase.sticker;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -12,9 +9,11 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -42,6 +41,7 @@ public class StickersActivity extends AppCompatActivity {
 
     public void onClickButtonSticker(View view) {
         String stickerInfo = (String)view.getTag();
+
         String time = String.valueOf(System.currentTimeMillis());
         uploadMessageInfo(sender, receiver, time, stickerInfo);
 
@@ -56,7 +56,6 @@ public class StickersActivity extends AppCompatActivity {
         builder.setWhen(System.currentTimeMillis());
         builder.setAutoCancel(true);
 
-
         //jump to activity
         Intent intent =new Intent (StickersActivity.this,ContactCardActivity.class);
         PendingIntent pi = PendingIntent.getActivities(StickersActivity.this, 0, new Intent[]{intent}, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -64,7 +63,6 @@ public class StickersActivity extends AppCompatActivity {
         //show content
         Notification notification = builder.build();
         manager.notify(1, notification);
-
     }
     public void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -79,7 +77,6 @@ public class StickersActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
     private void uploadMessageInfo(String sender, String receiver, String time, String stickerInfo) {
         database = FirebaseDatabase.getInstance().getReference();
         DatabaseReference messageInfo = database.child("messageHistory");

@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker.msghistory;
+package edu.neu.firebase.sticker;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
-
-import edu.neu.firebase.sticker.MsgCard;
-import edu.neu.firebase.sticker.MsgHolder;
-import edu.neu.firebase.sticker.R;
-import edu.neu.firebase.sticker.Utils;
 
 public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
@@ -53,7 +47,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
         if (sender.equals(userName) && receiver.equals(friendName)) {
             holder.senderSticker.setImageResource(stickerMap.get(sticker));
-            holder.senderStickerTime.setText(formattedDate);
+            holder.senderStickerTime.setText(sender + "\t\t\t\t" + formattedDate);
 
             holder.receiverSticker.setImageResource(0);
             holder.receiverStickerTime.setText("");
@@ -62,7 +56,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
             holder.senderStickerTime.setText("");
 
             holder.receiverSticker.setImageResource(stickerMap.get(sticker));
-            holder.receiverStickerTime.setText(formattedDate);
+            holder.receiverStickerTime.setText(formattedDate  + "\t\t\t\t" + receiver);
         }
     }
 

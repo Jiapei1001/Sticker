@@ -1,13 +1,13 @@
 package edu.neu.firebase.sticker;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,8 +17,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import edu.neu.firebase.sticker.msghistory.MsgAdapter;
 
 public class MsgHistoryActivity extends AppCompatActivity {
 
@@ -31,7 +29,7 @@ public class MsgHistoryActivity extends AppCompatActivity {
         String currUser = intent.getStringExtra("sender");
         String friend = intent.getStringExtra("receiver"); // friend
 
-        TextView msgSubject = (TextView) findViewById(R.id.msg_history_subject);
+        TextView msgSubject = findViewById(R.id.msg_history_subject);
         msgSubject.setText("messages from your amazing friend: " + friend);
 
         // get msg contents for adapter
@@ -39,7 +37,7 @@ public class MsgHistoryActivity extends AppCompatActivity {
         MsgAdapter msgHistoryAdapter = new MsgAdapter(msgCardList, currUser, friend);
 
         // assign adapter with msg contents to adapter view
-        RecyclerView msgHistoryAdapterView = (RecyclerView) findViewById(R.id.msgHistoryAdapter);
+        RecyclerView msgHistoryAdapterView = findViewById(R.id.msgHistoryAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         msgHistoryAdapterView.setLayoutManager(layoutManager);
         msgHistoryAdapterView.setAdapter(msgHistoryAdapter);
@@ -57,7 +55,10 @@ public class MsgHistoryActivity extends AppCompatActivity {
                         // update
                         for (DataSnapshot ds : snapshot.getChildren()) {
                             MsgCard msgCard = ds.getValue(MsgCard.class);
-                            msgCardList.add(msgCard);
+                            if ((msgCard.getSender().equals(currUser) && msgCard.getReceiver().equals(friend))
+                                    || (msgCard.getSender().equals(friend) && msgCard.getReceiver().equals(currUser))) {
+                                msgCardList.add(msgCard);
+                            }
                         }
                         Collections.sort(msgCardList, (a, b) -> a.getSendTime().compareTo(b.getSendTime()));
 
