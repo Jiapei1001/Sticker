@@ -1,4 +1,4 @@
-package edu.neu.firebase.sticker.msghistory;
+package edu.neu.firebase.sticker;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
-
-import edu.neu.firebase.sticker.MsgCard;
-import edu.neu.firebase.sticker.MsgHolder;
-import edu.neu.firebase.sticker.R;
-import edu.neu.firebase.sticker.Utils;
 
 public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 

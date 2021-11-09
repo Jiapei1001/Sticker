@@ -11,7 +11,7 @@ public class Utils {
 
     public static String formatTime(String time) {
         Date date = new Date(Long.parseLong(time));
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateFormat format = new SimpleDateFormat("MM-dd HH:mm");
         format.setTimeZone(TimeZone.getTimeZone("EST"));
         String formattedDate = format.format(date);
 
