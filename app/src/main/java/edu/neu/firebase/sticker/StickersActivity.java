@@ -64,6 +64,7 @@ public class StickersActivity extends AppCompatActivity {
         Notification notification = builder.build();
         manager.notify(1, notification);
     }
+
     public void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Notification name";
@@ -77,6 +78,7 @@ public class StickersActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
+
     private void uploadMessageInfo(String sender, String receiver, String time, String stickerInfo) {
         database = FirebaseDatabase.getInstance().getReference();
         DatabaseReference messageInfo = database.child("messageHistory");
