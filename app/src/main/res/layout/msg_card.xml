@@ -10,13 +10,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="80dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="20dp">
+            android:layout_height="180dp"
+            android:paddingBottom="4dp">
 
             <ImageView
                 android:id="@+id/msgImageViewSender"
@@ -42,23 +42,25 @@
                 android:id="@+id/msgSendTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/msg_card_sender_time"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/msgImageViewSender"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/msgImageViewSender" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/msgReceivTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/msg_card_receiver_time"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/msgImageViewReceiver"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/msgImageViewReceiver" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

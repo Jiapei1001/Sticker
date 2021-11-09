@@ -12,4 +12,6 @@
     <string name="stickers_stat">Stickers Stat</string>
     <string name="chat_history">Chat History</string>
     <string name="msg_history_friend_name">friend name</string>
+    <string name="login">LogIn</string>
+    <string name="show_sticker_history">Show Sticker History</string>
 </resources>

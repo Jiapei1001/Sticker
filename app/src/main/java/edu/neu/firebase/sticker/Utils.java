@@ -11,13 +11,13 @@ public class Utils {
 
     public static String formatTime(String time) {
         Date date = new Date(Long.parseLong(time));
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        format.setTimeZone(TimeZone.getTimeZone("Etc/UTC"));
+        DateFormat format = new SimpleDateFormat("MM-dd HH:mm");
+        format.setTimeZone(TimeZone.getTimeZone("EST"));
         String formattedDate = format.format(date);
 
         return formattedDate;
     }
-  
+
     public static HashMap<String, Integer> loadStickerMap() {
         HashMap<String, Integer> stickerMap = new HashMap<String, Integer>() {{
             put("sticker1", R.drawable.sticker1);
@@ -39,7 +39,6 @@ public class Utils {
 
         return stickerMap;
     }
-
 
     public static String showGreetingWordsByCurrentTime() {
         Calendar calendar = Calendar.getInstance();

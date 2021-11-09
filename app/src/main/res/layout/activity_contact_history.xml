@@ -11,15 +11,15 @@
         android:id="@+id/currentUserGreetingTextView"
         android:layout_width="197dp"
         android:layout_height="41dp"
-        android:text=""
         android:fontFamily="@font/merriweather_blackitalic"
+        android:text=""
         android:textColor="#E26A2C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contactRecyclerView"
@@ -35,10 +35,12 @@
         android:id="@+id/btnStickersStat"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:textSize="11sp"
         android:background="@drawable/circle"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/stickers_stat"
+        android:textColor="#5D4037"
+        android:textSize="11sp"
+        android:onClick="onStickerStatClick"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

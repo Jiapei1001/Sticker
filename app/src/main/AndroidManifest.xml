@@ -10,17 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sticker">
         <activity
+            android:name=".StickerStatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MsgHistoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".ContactCardActivity"
             android:exported="true" />
         <activity
             android:name=".StickersActivity"
             android:exported="true" />
         <activity
-            android:name=".msghistory.MsgHistoryActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HomePageActivity"
-            android:exported="false" />
             android:name=".ContactHistoryActivity"
             android:exported="true" />
         <activity
