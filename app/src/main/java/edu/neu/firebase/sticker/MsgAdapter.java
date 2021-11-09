@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -47,7 +48,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
 
         if (sender.equals(userName) && receiver.equals(friendName)) {
             holder.senderSticker.setImageResource(stickerMap.get(sticker));
-            holder.senderStickerTime.setText(sender + "\t\t\t\t" + formattedDate);
+            holder.senderStickerTime.setText(MessageFormat.format("{0}\t\t\t\t{1}", userName, formattedDate));
 
             holder.receiverSticker.setImageResource(0);
             holder.receiverStickerTime.setText("");
@@ -56,7 +57,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgHolder> {
             holder.senderStickerTime.setText("");
 
             holder.receiverSticker.setImageResource(stickerMap.get(sticker));
-            holder.receiverStickerTime.setText(formattedDate  + "\t\t\t\t" + receiver);
+            holder.receiverStickerTime.setText(MessageFormat.format("{0}\t\t\t\t{1}", formattedDate, friendName));
         }
     }
 
