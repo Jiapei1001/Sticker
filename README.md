@@ -32,6 +32,12 @@ Northeastern University, SV and Seattle
   <img src="https://user-images.githubusercontent.com/60984454/140998868-4d536579-742c-49ab-b88d-068c4794a135.jpg" alt="Editor" width="300">
 </div>
 
+### Jump Page After Notification
+
+<div>
+  <img src="https://user-images.githubusercontent.com/78562561/141007985-4fcfcf6b-abcf-400c-a950-2e93881ad486.jpg" alt="Editor" width="300">
+</div>
+
 ### Chat History Screen 
 
 <div>
