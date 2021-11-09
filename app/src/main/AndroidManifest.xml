@@ -13,11 +13,17 @@
             android:name=".stickerHistory.ReceivedStickersActivity"
             android:exported="true" />
         <activity
-            android:name=".msghistory.MsgHistoryActivity"
+            android:name=".MsgHistoryActivity"
             android:exported="true" />
         <activity
-            android:name=".HomePageActivity"
-            android:exported="false" />
+            android:name=".ContactCardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StickersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ContactHistoryActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
